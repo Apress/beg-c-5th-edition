@@ -95,6 +95,11 @@ bool is_prime(unsigned long long n)
         fclose(global.pfile);                                   // Yes, so close the file
         return true;                                            // and return
       }
+      else if((k = check(buffer, count, n)) == 0)
+      {
+        fclose(global.pfile);                                   // No, so close teh file
+        return false;                                           // and return
+      }
     }
     fclose(global.pfile);                                       // Close the file
   }
