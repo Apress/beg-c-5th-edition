@@ -28,7 +28,7 @@ int main(void)
     {
       capacity += capacity/4;          // Increase capacity by 25%
 
-      if(!(psTemp = realloc(pS, capacity))) return 1;
+      if(!(psTemp = realloc(pS, capacity * sizeof(char*)))) return 1;
 
       pS = psTemp;
     }
